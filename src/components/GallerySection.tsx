@@ -122,7 +122,7 @@ const GallerySection = () => {
           {galleryImages.map((image, index) => (
             <div
               key={index}
-              className={`relative group cursor-pointer overflow-hidden rounded-xl shadow-lg transition-all duration-1000 ${
+              className={`relative group cursor-pointer overflow-hidden rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-2 transition-all duration-1000 ${
                 isVisible ? 'animate-scale-in' : 'opacity-0 scale-95'
               }`}
               style={{ animationDelay: `${index * 100}ms` }}
@@ -135,8 +135,8 @@ const GallerySection = () => {
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="bg-white/90 px-4 py-2 rounded-lg text-primary font-medium">
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+                  <div className="bg-white/90 px-4 py-2 rounded-lg text-primary font-medium hover:scale-105 transition-all duration-300">
                     View Image
                   </div>
                 </div>
@@ -153,7 +153,7 @@ const GallerySection = () => {
               <Button
                 variant="outline"
                 size="icon"
-                className="absolute top-4 right-4 z-10 bg-white/10 border-white/20 text-white hover:bg-white/20"
+                className="absolute top-4 right-4 z-10 bg-white/10 border-white/20 text-white hover:bg-white/20 hover:scale-110 transition-all duration-300"
                 onClick={closeLightbox}
               >
                 <X className="w-6 h-6" />
@@ -163,7 +163,7 @@ const GallerySection = () => {
               <Button
                 variant="outline"
                 size="icon"
-                className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-white/10 border-white/20 text-white hover:bg-white/20"
+                className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-white/10 border-white/20 text-white hover:bg-white/20 hover:scale-110 transition-all duration-300"
                 onClick={prevImage}
               >
                 <ChevronLeft className="w-6 h-6" />
@@ -172,7 +172,7 @@ const GallerySection = () => {
               <Button
                 variant="outline"
                 size="icon"
-                className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-white/10 border-white/20 text-white hover:bg-white/20"
+                className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-white/10 border-white/20 text-white hover:bg-white/20 hover:scale-110 transition-all duration-300"
                 onClick={nextImage}
               >
                 <ChevronRight className="w-6 h-6" />

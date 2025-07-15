@@ -75,7 +75,7 @@ const AboutSection = () => {
         </div>
 
         {/* Mission Statement */}
-        <div className={`bg-white rounded-2xl p-8 md:p-12 shadow-lg mb-16 transition-all duration-1000 delay-300 ${
+        <div className={`bg-white rounded-2xl p-8 md:p-12 shadow-lg mb-16 transition-all duration-1000 delay-300 hover:shadow-xl hover:-translate-y-1 cursor-pointer ${
           isVisible ? 'animate-scale-in' : 'opacity-0 scale-95'
         }`}>
           <div className="text-center">
@@ -97,14 +97,14 @@ const AboutSection = () => {
             return (
               <div
                 key={index}
-                className={`bg-white p-8 rounded-xl card-hover transition-all duration-1000 ${
+                className={`bg-white p-8 rounded-xl card-hover transition-all duration-1000 group cursor-pointer ${
                   isVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-10'
                 }`}
                 style={{ animationDelay: `${500 + index * 100}ms` }}
               >
                 <div className="text-center">
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-accent/10 rounded-full mb-6">
-                    <Icon className="w-8 h-8 text-accent" />
+                  <div className="inline-flex items-center justify-center w-16 h-16 bg-accent/10 rounded-full mb-6 group-hover:bg-accent/20 group-hover:scale-110 transition-all duration-300">
+                    <Icon className="w-8 h-8 text-accent group-hover:scale-110 transition-all duration-300" />
                   </div>
                   <h4 className="text-xl font-semibold text-primary mb-4">
                     {highlight.title}
@@ -129,7 +129,7 @@ const AboutSection = () => {
             {['Respect', 'Integrity', 'Excellence', 'Compassion', 'Innovation', 'Responsibility'].map((value) => (
               <span
                 key={value}
-                className="bg-accent/10 text-accent px-6 py-3 rounded-full font-medium hover:bg-accent/20 transition-colors duration-300"
+                className="bg-accent/10 text-accent px-6 py-3 rounded-full font-medium hover:bg-accent/20 hover:scale-105 transition-all duration-300 cursor-pointer"
               >
                 {value}
               </span>

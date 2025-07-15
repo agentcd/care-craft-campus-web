@@ -127,14 +127,14 @@ const ContactSection = () => {
                   return (
                     <div
                       key={index}
-                      className={`bg-white p-6 rounded-xl shadow-lg card-hover ${
+                      className={`bg-white p-6 rounded-xl shadow-lg card-hover hover:shadow-xl transition-all duration-300 group ${
                         info.action ? 'cursor-pointer' : ''
                       }`}
                       onClick={info.action || undefined}
                     >
                       <div className="text-center">
-                        <div className={`inline-flex items-center justify-center w-12 h-12 ${info.bgColor} rounded-full mb-4`}>
-                          <Icon className={`w-6 h-6 ${info.color}`} />
+                        <div className={`inline-flex items-center justify-center w-12 h-12 ${info.bgColor} rounded-full mb-4 group-hover:scale-110 transition-all duration-300`}>
+                          <Icon className={`w-6 h-6 ${info.color} group-hover:scale-110 transition-all duration-300`} />
                         </div>
                         <h4 className="font-semibold text-primary mb-2">
                           {info.title}
@@ -149,11 +149,11 @@ const ContactSection = () => {
               </div>
 
               {/* Google Maps */}
-              <div className="bg-white rounded-2xl p-6 shadow-lg">
+              <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
                 <h3 className="text-xl font-semibold text-primary mb-4">
                   Find Us on Map
                 </h3>
-                <div className="aspect-video rounded-xl overflow-hidden">
+                <div className="aspect-video rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300">
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248849.886539092!2d77.49085452226766!3d12.953959988118836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sBengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1635768400000!5m2!1sen!2sin"
                     width="100%"
@@ -173,7 +173,7 @@ const ContactSection = () => {
           <div className={`transition-all duration-1000 delay-500 ${
             isVisible ? 'animate-slide-in-right' : 'opacity-0 translate-x-10'
           }`}>
-            <div className="bg-white rounded-2xl p-8 shadow-lg">
+            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
               <h3 className="text-2xl font-semibold text-primary mb-6">
                 Send us a Message
               </h3>

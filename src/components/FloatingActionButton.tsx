@@ -39,7 +39,7 @@ const FloatingActionButton = () => {
                 className="flex items-center space-x-3 animate-fade-in"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <span className="bg-white text-primary px-3 py-1 rounded-lg text-sm font-medium shadow-lg whitespace-nowrap">
+                <span className="bg-white text-primary px-3 py-1 rounded-lg text-sm font-medium shadow-lg whitespace-nowrap hover:bg-accent/5 hover:scale-105 transition-all duration-300">
                   {action.label}
                 </span>
                 <Button

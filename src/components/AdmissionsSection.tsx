@@ -91,36 +91,36 @@ const AdmissionsSection = () => {
           <div className={`transition-all duration-1000 delay-300 ${
             isVisible ? 'animate-slide-in-left' : 'opacity-0 -translate-x-10'
           }`}>
-            <div className="bg-white rounded-2xl p-8 shadow-lg">
+            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
               <h3 className="text-2xl font-semibold text-primary mb-6">
                 Get in Touch
               </h3>
               
               <div className="space-y-6">
-                <div className="flex items-center space-x-4 p-4 bg-accent-soft rounded-xl hover:bg-accent/10 transition-colors duration-300">
-                  <div className="flex-shrink-0 w-12 h-12 bg-accent/20 rounded-full flex items-center justify-center">
+                <div className="flex items-center space-x-4 p-4 bg-accent-soft rounded-xl hover:bg-accent/10 hover:scale-105 transition-all duration-300 cursor-pointer">
+                  <div className="flex-shrink-0 w-12 h-12 bg-accent/20 rounded-full flex items-center justify-center hover:bg-accent/30 transition-all duration-300">
                     <Phone className="w-6 h-6 text-accent" />
                   </div>
                   <div>
                     <p className="font-medium text-primary">Call Us</p>
                     <button
                       onClick={() => window.open('tel:+918123456789')}
-                      className="text-accent hover:text-accent-light transition-colors duration-300 font-medium"
+                      className="text-accent hover:text-accent-light hover:scale-105 transition-all duration-300 font-medium"
                     >
                       +91 8123456789
                     </button>
                   </div>
                 </div>
 
-                <div className="flex items-center space-x-4 p-4 bg-green-50 rounded-xl hover:bg-green-100 transition-colors duration-300">
-                  <div className="flex-shrink-0 w-12 h-12 bg-green-200 rounded-full flex items-center justify-center">
+                <div className="flex items-center space-x-4 p-4 bg-green-50 rounded-xl hover:bg-green-100 hover:scale-105 transition-all duration-300 cursor-pointer">
+                  <div className="flex-shrink-0 w-12 h-12 bg-green-200 rounded-full flex items-center justify-center hover:bg-green-300 transition-all duration-300">
                     <MessageCircle className="w-6 h-6 text-green-700" />
                   </div>
                   <div>
                     <p className="font-medium text-primary">WhatsApp</p>
                     <button
                       onClick={() => window.open('https://wa.me/918123456789?text=Hi! I am interested in admission at Sunshine Valley School.')}
-                      className="text-green-700 hover:text-green-800 transition-colors duration-300 font-medium"
+                      className="text-green-700 hover:text-green-800 hover:scale-105 transition-all duration-300 font-medium"
                     >
                       Chat with us
                     </button>
@@ -159,7 +159,7 @@ const AdmissionsSection = () => {
           <div className={`transition-all duration-1000 delay-500 ${
             isVisible ? 'animate-slide-in-right' : 'opacity-0 translate-x-10'
           }`}>
-            <div className="bg-white rounded-2xl p-8 shadow-lg">
+            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
               <h3 className="text-2xl font-semibold text-primary mb-6">
                 Request a Callback
               </h3>

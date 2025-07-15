@@ -83,7 +83,7 @@ const HeroSection = () => {
         >
           <button
             onClick={() => scrollToSection('#about')}
-            className="text-white/70 hover:text-white transition-colors duration-300 flex flex-col items-center space-y-2"
+            className="text-white/70 hover:text-white transition-all duration-300 flex flex-col items-center space-y-2 hover:scale-110 transform"
           >
             <span className="text-sm font-medium">Discover More</span>
             <ArrowDown className="w-5 h-5 animate-bounce" />

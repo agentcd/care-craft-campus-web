@@ -118,7 +118,7 @@ const TestimonialsSection = () => {
         <div className={`relative max-w-4xl mx-auto transition-all duration-1000 delay-300 ${
           isVisible ? 'animate-scale-in' : 'opacity-0 scale-95'
         }`}>
-          <div className="bg-white rounded-2xl p-8 md:p-12 shadow-xl relative overflow-hidden">
+          <div className="bg-white rounded-2xl p-8 md:p-12 shadow-xl relative overflow-hidden hover:shadow-2xl transition-all duration-300">
             {/* Quote Icon */}
             <div className="absolute top-6 left-6 opacity-10">
               <Quote className="w-16 h-16 text-accent" />
@@ -156,7 +156,7 @@ const TestimonialsSection = () => {
             <Button
               variant="outline"
               size="icon"
-              className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white border-primary/20 hover:border-primary/40"
+              className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white hover:scale-110 border-primary/20 hover:border-primary/40 transition-all duration-300"
               onClick={prevTestimonial}
             >
               <ChevronLeft className="w-5 h-5 text-primary" />
@@ -165,7 +165,7 @@ const TestimonialsSection = () => {
             <Button
               variant="outline"
               size="icon"
-              className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white border-primary/20 hover:border-primary/40"
+              className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white hover:scale-110 border-primary/20 hover:border-primary/40 transition-all duration-300"
               onClick={nextTestimonial}
             >
               <ChevronRight className="w-5 h-5 text-primary" />
@@ -174,17 +174,17 @@ const TestimonialsSection = () => {
 
           {/* Dots Indicator */}
           <div className="flex justify-center mt-8 space-x-3">
-            {testimonials.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => goToSlide(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === currentIndex
-                    ? 'bg-accent scale-125'
-                    : 'bg-accent/30 hover:bg-accent/50'
-                }`}
-              />
-            ))}
+              {testimonials.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => goToSlide(index)}
+                  className={`w-3 h-3 rounded-full transition-all duration-300 hover:scale-125 ${
+                    index === currentIndex
+                      ? 'bg-accent scale-125'
+                      : 'bg-accent/30 hover:bg-accent/50'
+                  }`}
+                />
+              ))}
           </div>
 
           {/* Progress Bar */}
@@ -211,7 +211,7 @@ const TestimonialsSection = () => {
           </p>
           <Button
             size="lg"
-            className="btn-accent text-lg px-8 py-6"
+            className="btn-accent text-lg px-8 py-6 hover:scale-105 transition-all duration-300"
             onClick={() => {
               const element = document.querySelector('#admissions');
               if (element) {

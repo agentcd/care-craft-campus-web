@@ -52,7 +52,7 @@ const Navigation = () => {
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className="text-foreground hover:text-accent transition-colors duration-300 font-medium relative group"
+                className="text-foreground hover:text-accent transition-all duration-300 font-medium relative group hover:scale-105 transform"
               >
                 {item.name}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full"></span>
@@ -65,7 +65,7 @@ const Navigation = () => {
             <Button
               variant="ghost"
               size="sm"
-              className="text-primary hover:text-accent"
+              className="text-primary hover:text-accent hover:scale-105 transition-all duration-300"
               onClick={() => window.open('tel:+918123456789')}
             >
               <Phone className="w-4 h-4 mr-2" />
@@ -74,7 +74,7 @@ const Navigation = () => {
             <Button
               variant="default"
               size="sm"
-              className="btn-accent"
+              className="btn-accent hover:scale-105 transition-all duration-300"
               onClick={() => scrollToSection('#admissions')}
             >
               Apply Now
@@ -83,7 +83,7 @@ const Navigation = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-primary"
+            className="md:hidden text-primary hover:text-accent hover:scale-110 transition-all duration-300"
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -102,7 +102,7 @@ const Navigation = () => {
                 <button
                   key={item.name}
                   onClick={() => scrollToSection(item.href)}
-                  className="block w-full text-left py-2 text-foreground hover:text-accent transition-colors duration-300 font-medium"
+                  className="block w-full text-left py-2 text-foreground hover:text-accent transition-all duration-300 font-medium hover:bg-accent/5 rounded-lg px-2"
                 >
                   {item.name}
                 </button>
@@ -110,7 +110,7 @@ const Navigation = () => {
               <div className="pt-4 space-y-3">
                 <Button
                   variant="outline"
-                  className="w-full"
+                  className="w-full hover:scale-105 transition-all duration-300"
                   onClick={() => window.open('tel:+918123456789')}
                 >
                   <Phone className="w-4 h-4 mr-2" />
@@ -118,7 +118,7 @@ const Navigation = () => {
                 </Button>
                 <Button
                   variant="default"
-                  className="w-full btn-accent"
+                  className="w-full btn-accent hover:scale-105 transition-all duration-300"
                   onClick={() => scrollToSection('#admissions')}
                 >
                   Apply Now
