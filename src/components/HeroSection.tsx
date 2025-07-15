@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowDown } from 'lucide-react';
-import heroImage from '@/assets/hero-school.jpg';
+import heroImage from '@/assets/hero-students.jpg';
 
 const HeroSection = () => {
   const [isVisible, setIsVisible] = useState(false);
