@@ -106,7 +106,7 @@ const ContactSection = () => {
         <div className={`text-center mb-16 transition-all duration-1000 ${
           isVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-10'
         }`}>
-          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6 hover:scale-105 transition-transform duration-300 cursor-default">
             Get in <span className="text-accent">Touch</span>
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -174,7 +174,7 @@ const ContactSection = () => {
             isVisible ? 'animate-slide-in-right' : 'opacity-0 translate-x-10'
           }`}>
             <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
-              <h3 className="text-2xl font-semibold text-primary mb-6">
+              <h3 className="text-2xl font-semibold text-primary mb-6 hover:scale-105 transition-transform duration-300 cursor-default">
                 Send us a Message
               </h3>
               
@@ -243,8 +243,8 @@ const ContactSection = () => {
                 <Button
                   type="submit"
                   disabled={isSubmitting}
-                  className={`w-full btn-primary py-6 text-lg ${
-                    isSubmitting ? 'animate-pulse' : 'hover:animate-pulse'
+                  className={`w-full btn-primary py-6 text-lg transition-all duration-300 ${
+                    isSubmitting ? 'animate-pulse' : 'hover:animate-pulse hover:scale-105'
                   }`}
                 >
                   {isSubmitting ? 'Sending Message...' : 'Send Message'}

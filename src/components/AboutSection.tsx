@@ -106,7 +106,7 @@ const AboutSection = () => {
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-accent/10 rounded-full mb-6 group-hover:bg-accent/20 group-hover:scale-110 transition-all duration-300">
                     <Icon className="w-8 h-8 text-accent group-hover:scale-110 transition-all duration-300" />
                   </div>
-                  <h4 className="text-xl font-semibold text-primary mb-4">
+                  <h4 className="text-xl font-semibold text-primary mb-4 group-hover:scale-105 transition-transform duration-300">
                     {highlight.title}
                   </h4>
                   <p className="text-muted-foreground leading-relaxed">

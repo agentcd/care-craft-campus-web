@@ -27,7 +27,7 @@ const FloatingActionButton = () => {
   };
 
   return (
-    <div className="fixed bottom-6 right-6 z-40">
+    <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50">
       {/* Action Buttons */}
       {isOpen && (
         <div className="absolute bottom-16 right-0 space-y-3 animate-scale-in">
@@ -39,7 +39,7 @@ const FloatingActionButton = () => {
                 className="flex items-center space-x-3 animate-fade-in"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <span className="bg-white text-primary px-3 py-1 rounded-lg text-sm font-medium shadow-lg whitespace-nowrap hover:bg-accent/5 hover:scale-105 transition-all duration-300">
+                <span className="hidden sm:block bg-white text-primary px-3 py-1 rounded-lg text-sm font-medium shadow-lg whitespace-nowrap hover:bg-accent/5 hover:scale-105 transition-all duration-300">
                   {action.label}
                 </span>
                 <Button
@@ -58,7 +58,7 @@ const FloatingActionButton = () => {
       {/* Main FAB */}
       <Button
         size="icon"
-        className={`w-14 h-14 rounded-full shadow-xl transition-all duration-300 ${
+        className={`w-12 h-12 sm:w-14 sm:h-14 rounded-full shadow-xl transition-all duration-300 ${
           isOpen 
             ? 'bg-accent hover:bg-accent-light rotate-45' 
             : 'bg-primary hover:bg-primary-light hover:scale-110'
@@ -69,11 +69,12 @@ const FloatingActionButton = () => {
             ? '0 8px 32px rgba(0, 0, 0, 0.2)' 
             : '0 4px 20px rgba(220, 100, 15, 0.4)',
         }}
+        aria-label={isOpen ? 'Close menu' : 'Open contact menu'}
       >
         {isOpen ? (
-          <X className="w-6 h-6 text-white" />
+          <X className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
         ) : (
-          <Plus className="w-6 h-6 text-white" />
+          <Plus className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
         )}
       </Button>
 

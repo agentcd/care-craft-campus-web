@@ -219,8 +219,8 @@ const AdmissionsSection = () => {
                 <Button
                   type="submit"
                   disabled={isSubmitting}
-                  className={`w-full btn-primary py-6 text-lg ${
-                    isSubmitting ? 'animate-pulse' : 'hover:animate-pulse'
+                  className={`w-full btn-primary py-6 text-lg transition-all duration-300 ${
+                    isSubmitting ? 'animate-pulse' : 'hover:animate-pulse hover:scale-105'
                   }`}
                 >
                   {isSubmitting ? 'Submitting...' : 'Request a Callback'}
