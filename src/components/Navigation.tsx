@@ -36,14 +36,14 @@ const Navigation = () => {
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         isScrolled
           ? 'bg-background/95 backdrop-blur-md shadow-lg border-b border-border'
-          : 'bg-white/95 backdrop-blur-sm'
+          : 'bg-black/20 backdrop-blur-sm'
       }`}
     >
       <div className="max-w-7xl mx-auto">
         <div className="flex items-center justify-between h-16 md:h-20 px-4 md:px-6">
           {/* School Name */}
           <div className={`text-base md:text-2xl font-bold flex-1 md:flex-none transition-colors duration-300 ${
-            isScrolled ? 'text-foreground' : 'text-foreground'
+            isScrolled ? 'text-foreground' : 'text-white'
           }`}>
             <span className="text-accent">Sunshine Valley</span> School
           </div>
@@ -55,7 +55,7 @@ const Navigation = () => {
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
                 className={`hover:text-accent transition-all duration-300 font-medium relative group hover:scale-105 transform ${
-                  isScrolled ? 'text-foreground' : 'text-foreground'
+                  isScrolled ? 'text-foreground' : 'text-white'
                 }`}
               >
                 {item.name}
@@ -70,7 +70,7 @@ const Navigation = () => {
               variant="ghost"
               size="sm"
               className={`hover:text-accent hover:scale-105 transition-all duration-300 ${
-                isScrolled ? 'text-foreground hover:bg-muted' : 'text-foreground hover:bg-muted'
+                isScrolled ? 'text-foreground hover:bg-muted' : 'text-white hover:bg-white/10'
               }`}
               onClick={() => window.open('tel:+918123456789')}
             >
@@ -90,7 +90,7 @@ const Navigation = () => {
           {/* Mobile Menu Button */}
           <button
             className={`md:hidden hover:text-accent hover:scale-110 transition-all duration-300 p-2 z-50 relative ${
-              isScrolled ? 'text-foreground' : 'text-foreground'
+              isScrolled ? 'text-foreground' : 'text-white'
             }`}
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
@@ -105,11 +105,7 @@ const Navigation = () => {
             isOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
           }`}
         >
-          <div className={`border-t border-border shadow-lg ${
-            isScrolled
-              ? 'bg-background/95 backdrop-blur-md'
-              : 'bg-white/95 backdrop-blur-sm'
-          }`}>
+          <div className="bg-white border-t border-border shadow-lg">
             <div className="px-4 py-6 space-y-4 max-w-7xl mx-auto">
               {navItems.map((item) => (
                 <button
