@@ -97,7 +97,7 @@ const AboutSection = () => {
             return (
               <div
                 key={index}
-                className={`bg-white p-8 rounded-xl card-hover transition-all duration-1000 group cursor-pointer ${
+                className={`bg-white p-8 rounded-xl card-hover transition-all duration-1000 group cursor-pointer hover:scale-105 ${
                   isVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-10'
                 }`}
                 style={{ animationDelay: `${500 + index * 100}ms` }}

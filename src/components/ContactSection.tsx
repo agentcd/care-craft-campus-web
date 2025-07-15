@@ -173,7 +173,7 @@ const ContactSection = () => {
           <div className={`transition-all duration-1000 delay-500 ${
             isVisible ? 'animate-slide-in-right' : 'opacity-0 translate-x-10'
           }`}>
-            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
               <h3 className="text-2xl font-semibold text-primary mb-6 hover:scale-105 transition-transform duration-300 cursor-default">
                 Send us a Message
               </h3>
