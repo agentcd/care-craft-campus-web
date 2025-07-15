@@ -105,7 +105,7 @@ const Navigation = () => {
             isOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
           }`}
         >
-          <div className="bg-background/98 backdrop-blur-md border-t border-border shadow-lg">
+          <div className="bg-background border-t border-border shadow-lg">
             <div className="px-4 py-6 space-y-4 max-w-7xl mx-auto">
               {navItems.map((item) => (
                 <button
