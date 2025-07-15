@@ -26,7 +26,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section id="home" className="relative min-h-[100svh] md:min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="home" className="relative h-screen min-h-[100svh] flex items-center justify-center overflow-hidden">
       {/* Background Image with Parallax */}
       <div 
         className="absolute inset-0 z-0"
