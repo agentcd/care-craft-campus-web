@@ -1,27 +1,22 @@
 import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowDown } from 'lucide-react';
-import { usePageLoaded } from '@/hooks/usePageLoaded';
 import heroImage from '@/assets/hero-students.jpg';
 
 const HeroSection = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [scrollY, setScrollY] = useState(0);
-  const { isPageLoaded } = usePageLoaded();
 
   useEffect(() => {
-    // Only enable animations and scroll effects after page is loaded
-    if (isPageLoaded) {
-      setIsVisible(true);
-      
-      const handleScroll = () => {
-        setScrollY(window.scrollY);
-      };
+    setIsVisible(true);
+    
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
 
-      window.addEventListener('scroll', handleScroll);
-      return () => window.removeEventListener('scroll', handleScroll);
-    }
-  }, [isPageLoaded]);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
@@ -36,7 +31,7 @@ const HeroSection = () => {
       <div 
         className="absolute inset-0 z-0"
         style={{
-          transform: isPageLoaded ? `translateY(${scrollY * 0.5}px)` : 'translateY(0px)',
+          transform: `translateY(${scrollY * 0.5}px)`,
         }}
       >
         <img
@@ -49,7 +44,7 @@ const HeroSection = () => {
 
       {/* Content */}
       <div className="relative z-10 text-center px-4 md:px-8 max-w-4xl mx-auto pt-16 md:pt-0">
-        <div className={`transition-all duration-1000 ${isPageLoaded && isVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-10'}`}>
+        <div className={`transition-all duration-1000 ${isVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-10'}`}>
           <h1 className="text-3xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             A Place Where Learning{' '}
             <span className="text-gradient bg-gradient-to-r from-accent to-accent-light bg-clip-text text-transparent">
