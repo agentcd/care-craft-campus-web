@@ -12,7 +12,7 @@ const AboutSection = () => {
           setIsVisible(true);
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.1 }
     );
 
     if (sectionRef.current) {
@@ -62,7 +62,7 @@ const AboutSection = () => {
       ref={sectionRef}
     >
       <div className="container-max">
-        <div className={`text-center mb-16 transition-all duration-1000 ${
+        <div className={`text-center mb-8 md:mb-16 transition-all duration-1000 ${
           isVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-10'
         }`}>
           <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
@@ -75,7 +75,7 @@ const AboutSection = () => {
         </div>
 
         {/* Mission Statement */}
-        <div className={`bg-white rounded-2xl p-8 md:p-12 shadow-lg mb-16 transition-all duration-1000 delay-300 hover:shadow-xl hover:-translate-y-1 cursor-pointer ${
+        <div className={`bg-white rounded-2xl p-6 md:p-12 shadow-lg mb-8 md:mb-16 transition-all duration-1000 delay-300 hover:shadow-xl hover:-translate-y-1 cursor-pointer ${
           isVisible ? 'animate-scale-in' : 'opacity-0 scale-95'
         }`}>
           <div className="text-center">
@@ -91,13 +91,13 @@ const AboutSection = () => {
         </div>
 
         {/* Highlights Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
           {highlights.map((highlight, index) => {
             const Icon = highlight.icon;
             return (
               <div
                 key={index}
-                className={`bg-white p-8 rounded-xl card-hover transition-all duration-1000 group cursor-pointer hover:scale-105 ${
+                className={`bg-white p-6 md:p-8 rounded-xl card-hover transition-all duration-1000 group cursor-pointer hover:scale-105 ${
                   isVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-10'
                 }`}
                 style={{ animationDelay: `${500 + index * 100}ms` }}
@@ -119,7 +119,7 @@ const AboutSection = () => {
         </div>
 
         {/* Values Section */}
-        <div className={`mt-16 text-center transition-all duration-1000 delay-1000 ${
+        <div className={`mt-8 md:mt-16 text-center transition-all duration-1000 delay-1000 ${
           isVisible ? 'animate-fade-in' : 'opacity-0'
         }`}>
           <h3 className="text-3xl font-semibold text-primary mb-8">
