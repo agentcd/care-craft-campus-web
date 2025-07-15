@@ -36,13 +36,13 @@ const Navigation = () => {
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         isScrolled
           ? 'blur-backdrop shadow-lg border-b border-border'
-          : 'bg-black/20 backdrop-blur-sm'
+          : 'bg-black/30 backdrop-blur-sm'
       }`}
     >
-      <div className="container-max">
-        <div className="flex items-center justify-between h-14 md:h-20 px-4 md:px-6">
+      <div className="max-w-7xl mx-auto">
+        <div className="flex items-center justify-between h-16 md:h-20 px-4 md:px-6">
           {/* School Name */}
-          <div className="text-lg md:text-2xl font-bold text-white">
+          <div className="text-base md:text-2xl font-bold text-white flex-1 md:flex-none">
             <span className="text-accent">Sunshine Valley</span> School
           </div>
 
@@ -83,8 +83,9 @@ const Navigation = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-white hover:text-accent hover:scale-110 transition-all duration-300 p-2"
+            className="md:hidden text-white hover:text-accent hover:scale-110 transition-all duration-300 p-2 z-50 relative"
             onClick={() => setIsOpen(!isOpen)}
+            aria-label="Toggle menu"
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -92,17 +93,17 @@ const Navigation = () => {
 
         {/* Mobile Menu */}
         <div
-          className={`md:hidden transition-all duration-300 overflow-hidden ${
-            isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+          className={`md:hidden absolute top-full left-0 w-full transition-all duration-300 overflow-hidden ${
+            isOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
           }`}
         >
-          <div className="bg-background/95 backdrop-blur-md border-t border-border">
-            <div className="px-4 py-6 space-y-4">
+          <div className="bg-background/98 backdrop-blur-md border-t border-border shadow-lg">
+            <div className="px-4 py-6 space-y-4 max-w-7xl mx-auto">
               {navItems.map((item) => (
                 <button
                   key={item.name}
                   onClick={() => scrollToSection(item.href)}
-                  className="block w-full text-left py-2 text-foreground hover:text-accent transition-all duration-300 font-medium hover:bg-accent/5 rounded-lg px-2"
+                  className="block w-full text-left py-3 text-foreground hover:text-accent transition-all duration-300 font-medium hover:bg-accent/10 rounded-lg px-3"
                 >
                   {item.name}
                 </button>
@@ -111,7 +112,10 @@ const Navigation = () => {
                 <Button
                   variant="outline"
                   className="w-full hover:scale-105 transition-all duration-300"
-                  onClick={() => window.open('tel:+918123456789')}
+                  onClick={() => {
+                    window.open('tel:+918123456789');
+                    setIsOpen(false);
+                  }}
                 >
                   <Phone className="w-4 h-4 mr-2" />
                   Call Us

@@ -26,7 +26,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section id="home" className="relative min-h-[100vh] md:min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="home" className="relative min-h-[100svh] md:min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Parallax */}
       <div 
         className="absolute inset-0 z-0"
@@ -43,7 +43,7 @@ const HeroSection = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 text-center px-4 md:px-8 max-w-4xl mx-auto pt-14 md:pt-0">
+      <div className="relative z-10 text-center px-4 md:px-8 max-w-4xl mx-auto pt-16 md:pt-0">
         <div className={`transition-all duration-1000 ${isVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-10'}`}>
           <h1 className="text-3xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             A Place Where Learning{' '}

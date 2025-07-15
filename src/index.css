@@ -270,7 +270,7 @@ All colors MUST be HSL.
   }
   
   .container-max {
-    @apply max-w-7xl mx-auto px-4 md:px-6;
+    @apply max-w-7xl mx-auto;
   }
   
   .blur-backdrop {

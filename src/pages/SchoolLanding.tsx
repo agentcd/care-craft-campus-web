@@ -12,12 +12,12 @@ const SchoolLanding = () => {
   return (
     <div className="min-h-screen">
       <Navigation />
-      <div className="pt-14 md:pt-0">
+      <div className="pt-16 md:pt-0">
         <HeroSection />
-      <AboutSection />
-      <AdmissionsSection />
-      <GallerySection />
-      <TestimonialsSection />
+        <AboutSection />
+        <AdmissionsSection />
+        <GallerySection />
+        <TestimonialsSection />
         <ContactSection />
         <Footer />
       </div>
