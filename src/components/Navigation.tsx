@@ -8,7 +8,7 @@ const Navigation = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      setIsScrolled(window.scrollY > 100); // Increased threshold for better mobile behavior
     };
 
     window.addEventListener('scroll', handleScroll);
