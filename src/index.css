@@ -128,7 +128,8 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground font-poppins;
+    @apply bg-background text-foreground;
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
   }
   
   html {
@@ -265,11 +266,11 @@ All colors MUST be HSL.
   }
   
   .section-padding {
-    @apply py-16 md:py-24 px-4 md:px-8;
+    @apply py-12 md:py-24 px-4 md:px-8;
   }
   
   .container-max {
-    @apply max-w-7xl mx-auto;
+    @apply max-w-7xl mx-auto px-4 md:px-6;
   }
   
   .blur-backdrop {

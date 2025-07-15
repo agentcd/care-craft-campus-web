@@ -36,13 +36,13 @@ const Navigation = () => {
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         isScrolled
           ? 'blur-backdrop shadow-lg border-b border-border'
-          : 'bg-transparent'
+          : 'bg-black/20 backdrop-blur-sm'
       }`}
     >
       <div className="container-max">
-        <div className="flex items-center justify-between h-16 md:h-20 px-4 md:px-8">
+        <div className="flex items-center justify-between h-14 md:h-20 px-4 md:px-6">
           {/* School Name */}
-          <div className="text-xl md:text-2xl font-bold text-primary">
+          <div className="text-lg md:text-2xl font-bold text-white">
             <span className="text-accent">Sunshine Valley</span> School
           </div>
 
@@ -52,7 +52,7 @@ const Navigation = () => {
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className="text-foreground hover:text-accent transition-all duration-300 font-medium relative group hover:scale-105 transform"
+                className="text-white hover:text-accent transition-all duration-300 font-medium relative group hover:scale-105 transform"
               >
                 {item.name}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full"></span>
@@ -65,7 +65,7 @@ const Navigation = () => {
             <Button
               variant="ghost"
               size="sm"
-              className="text-primary hover:text-accent hover:scale-105 transition-all duration-300"
+              className="text-white hover:text-accent hover:scale-105 transition-all duration-300"
               onClick={() => window.open('tel:+918123456789')}
             >
               <Phone className="w-4 h-4 mr-2" />
@@ -83,7 +83,7 @@ const Navigation = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-primary hover:text-accent hover:scale-110 transition-all duration-300"
+            className="md:hidden text-white hover:text-accent hover:scale-110 transition-all duration-300 p-2"
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}

@@ -26,7 +26,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="home" className="relative min-h-[100vh] md:min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Parallax */}
       <div 
         className="absolute inset-0 z-0"
@@ -43,16 +43,16 @@ const HeroSection = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 text-center px-4 md:px-8 max-w-4xl mx-auto">
+      <div className="relative z-10 text-center px-4 md:px-8 max-w-4xl mx-auto pt-14 md:pt-0">
         <div className={`transition-all duration-1000 ${isVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-10'}`}>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+          <h1 className="text-3xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             A Place Where Learning{' '}
             <span className="text-gradient bg-gradient-to-r from-accent to-accent-light bg-clip-text text-transparent">
               Begins with Care
             </span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-white/90 mb-12 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-2xl text-white/90 mb-8 md:mb-12 max-w-2xl mx-auto leading-relaxed">
             We believe in holistic education and personal growth for every child in our nurturing community.
           </p>
 
