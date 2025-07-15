@@ -138,7 +138,7 @@ const Footer = () => {
                       key={social.label}
                       variant="outline"
                       size="icon"
-                      className="border-white/30 text-white hover:bg-white/10 hover:scale-110 transition-all duration-300"
+                      className="border-white/50 text-white bg-white/10 hover:bg-white/20 hover:scale-110 transition-all duration-300"
                       onClick={() => window.open(social.href)}
                     >
                       <Icon className="w-5 h-5" />
