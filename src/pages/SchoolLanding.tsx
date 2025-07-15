@@ -1,0 +1,27 @@
+import Navigation from '@/components/Navigation';
+import HeroSection from '@/components/HeroSection';
+import AboutSection from '@/components/AboutSection';
+import AdmissionsSection from '@/components/AdmissionsSection';
+import GallerySection from '@/components/GallerySection';
+import ContactSection from '@/components/ContactSection';
+import TestimonialsSection from '@/components/TestimonialsSection';
+import FloatingActionButton from '@/components/FloatingActionButton';
+import Footer from '@/components/Footer';
+
+const SchoolLanding = () => {
+  return (
+    <div className="min-h-screen">
+      <Navigation />
+      <HeroSection />
+      <AboutSection />
+      <AdmissionsSection />
+      <GallerySection />
+      <TestimonialsSection />
+      <ContactSection />
+      <Footer />
+      <FloatingActionButton />
+    </div>
+  );
+};
+
+export default SchoolLanding;
